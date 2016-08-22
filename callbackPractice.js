@@ -151,8 +151,6 @@ uniq(names, function(uniqArr){
 
 function each(namesArr, cb) {
   for (var i = 0; i < namesArr.length; i++) {
-     var x = namesArr[i];
-     var y = i;
      cb(namesArr[i], i);
   }
 }
