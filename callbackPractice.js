@@ -153,7 +153,7 @@ function each(namesArr, cb) {
   for (var i = 0; i < namesArr.length; i++) {
      var x = namesArr[i];
      var y = i;
-     cb(x, y);
+     cb(namesArr[i], i);
   }
 }
 
@@ -177,20 +177,12 @@ each(names, function(item, indice){
  //code here for getUserById
 
 function getUserById(usersArr, userId, cb) {
-var targetUser = {};
   for (var i = 0; i < usersArr.length; i++) {
     if (usersArr[i].id === userId) {
-    targetUser = {
-      id: usersArr[i].id,
-      email: usersArr[i].email,
-      name: usersArr[i].name,
-      address: usersArr[i].address
-    }
+    cb(usersArr[i])
     }
   }
-  cb(targetUser);
 }
-
 
 
 var users = [
